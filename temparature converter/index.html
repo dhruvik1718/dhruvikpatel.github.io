@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temparature converter</title>
+    <style>
+        body{
+            padding: 50px 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        #container{
+            position: relative;
+            text-align: center;
+            background-color: #1abc9c;
+            padding: 80px;
+            /* width: 1000px; */
+        }
+        .input-div{
+            display: inline-block;
+        }
+        .inp{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            width: 250px;
+        }
+        label{
+            font-size: 20px;
+        }
+        .e{
+            display: inline-block;
+            text-align: center;
+            width: 22px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .border{
+            border-radius: 8px;
+            border: 2px solid darkgray;
+        }
+        .by{
+            position:absolute ;
+            bottom: 0px;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="border">
+    
+    <div id="container">
+        <h1>Temparature Converter</h1>
+        <div class="input-div">
+            <label>Celsius</label><br>
+            <input type="number" value="0" id="cel" class="inp">
+        </div>
+        <div class="e">
+            =
+        </div>
+        <div class="input-div">
+            <label >Fahrenheit</label><br>
+            <input type="number" value="32" id="fah" class="inp">
+        </div>
+        <div class="by">
+           <p>Dhruvik malaviya</p> 
+        </div>
+    </div>
+</div>
+
+    <script>
+        let cel = document.getElementById("cel");
+        let fah = document.getElementById("fah");
+
+        cel.addEventListener('input', function(){
+            let c = this.value;
+            let f = (c * 9/5) + 32;
+            if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+            }
+            fah.value = f;
+        });
+        fah.addEventListener('input', function(){
+            let f = this.value;
+            let c = (f-32)*5/9;
+            if(!Number.isInteger(c)){
+                c = c.toFixed(4);
+            }
+            cel.value = c;
+        });
+    </script>
+</body>
+</html>

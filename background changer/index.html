@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>َbacground change</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <span class="btn" id="white" onclick="changebg('#ffffff')"></span>
+        <span class="btn" id="gray" onclick="changebg('#808080')"></span>
+        <span class="btn" id="violat" onclick="changebg('#ee82ee')"></span>
+        <span class="btn" id="black" onclick="changebg('black')"></span>
+    </div>
+
+  <form class="box" action="index.html" method="post">
+    <h1>login</h1>
+    <input type="text" name="" placeholder="Username">
+    <input type="password" name="" placeholder="Password">
+    <input type="submit" name="" value="Login">
+  </form>
+
+  <script>
+      function changebg(color){
+          document.body.style.backgroundColor = color;
+      }
+  </script>
+
+
+</body>
+
+</html>
